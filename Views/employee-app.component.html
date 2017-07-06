@@ -1,0 +1,22 @@
+<!--Two way binding Binding (ngModel) using @Input-->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div>    
+                Employee Title : <input type="text" name="title"  [(ngModel)] ="empObj.title" /> <br/><br/> 
+                Employee First Name : <input type="text" name="fisrtName"  [(ngModel)] ="empObj.fisrtName" /> <br/><br/>
+                Employee Last Name : <input type="text" name="lastName"    [(ngModel)] ="empObj.lastName" /> <br/><br/>
+
+                <input type="button" (click)="AddEmployee()" value="Submit"> <br/><br/>
+                </div>
+
+                <grid-com [grid-data]='employees' [grid-entityname]="'Employee'"></grid-com>
+            </div>
+            <!-- /.col-xs-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
